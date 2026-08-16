@@ -480,9 +480,12 @@
             margin-bottom: 36px;
             flex-wrap: wrap;
         }
-        .hero-meta strong {
+        .hero-meta a {
             color: var(--white);
             font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            text-decoration-color: var(--primary);
         }
         .hero-meta .dot {
             width: 5px;
@@ -1151,19 +1154,27 @@
         }
         .flyers-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 32px;
             margin-top: 16px;
         }
         @media (min-width: 768px) {
             .flyers-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 40px;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 24px;
+            }
+        }
+        @media (max-width: 480px) {
+            .flyers-grid {
+                grid-template-columns: 1fr;
+                max-width: 320px;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
         .flyer-card {
             background: var(--white);
-            border-radius: 24px;
+            border-radius: 16px;
             overflow: hidden;
             box-shadow: var(--shadow-sm);
             transition: var(--transition);
@@ -1182,26 +1193,26 @@
             display: block;
         }
         .flyer-card .flyer-info {
-            padding: 20px 24px 24px;
+            padding: 16px 16px 20px;
             text-align: center;
         }
         .flyer-card .flyer-info .flyer-year {
             font-family: var(--font-serif);
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             font-weight: 900;
             color: var(--primary);
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
         .flyer-card .flyer-info .flyer-title {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             font-weight: 600;
             color: var(--text-dark);
         }
         .flyer-card .flyer-info .flyer-tag {
             display: inline-block;
-            margin-top: 8px;
-            padding: 4px 16px;
-            font-size: 0.65rem;
+            margin-top: 6px;
+            padding: 2px 12px;
+            font-size: 0.6rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.06em;
@@ -1396,8 +1407,8 @@
                 font-size: 1.1rem;
             }
             .flyers-grid {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 24px;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
             }
             .partners-grid {
                 gap: 40px 50px;
@@ -1462,7 +1473,7 @@
             }
             .flyers-grid {
                 grid-template-columns: 1fr;
-                max-width: 320px;
+                max-width: 280px;
                 margin-left: auto;
                 margin-right: auto;
             }
@@ -1526,7 +1537,7 @@
     <header class="site-header" id="header">
         <div class="container">
             <a href="#hero" class="logo">
-                <img src="./logo.png" alt="Godded Seed Confab Logo" />
+                <img src="./Confab 2026 logo WHITE.png" alt="Godded Seed Confab Logo" />
             </a>
             <ul class="nav-links">
                 <li><a href="#about">The Event</a></li>
@@ -1567,24 +1578,25 @@
                     <span class="dot"></span>
                     Confab 2026 · Saturday, 28th November
                 </div>
-                <img class="hero-title-image" src="./heroB.png" alt="EXTRAORDINARY" />
+                <img class="hero-title-image" src="./extra ordinary.png" alt="EXTRAORDINARY" />
                 <p class="hero-sub">
                     A transformational experience designed to activate the next phase of your life,
                     skyrocket your growth and raise a generation that will transform the world for God.
                 </p>
                 <div class="hero-meta">
-                    <span>w/ <strong>Shiloh Okonwor</strong></span>
+                    <span>w/ <a href="https://www.facebook.com/shilohokonwor" target="_blank">Dunamis Shiloh Okonwor</a></span>
                     <span class="dot"></span>
-                    <span>8 Masterclasses</span>
+                    <span>Godded Seed Community</span>
                     <span class="dot"></span>
                     <span>2026</span>
                 </div>
                 <div class="hero-actions">
-                    <a href="https://luma.com/5ufh1xlg" target="_blank" class="btn btn-register">
-                        <i class="fas fa-map-pin"></i> Register Lagos
-                    </a>
+                    <!-- Port Harcourt first -->
                     <a href="https://luma.com/q8fonhk4" target="_blank" class="btn btn-register">
                         <i class="fas fa-map-pin"></i> Register Port Harcourt
+                    </a>
+                    <a href="https://luma.com/5ufh1xlg" target="_blank" class="btn btn-register">
+                        <i class="fas fa-map-pin"></i> Register Lagos
                     </a>
                 </div>
                 <div class="hero-stats">
@@ -1642,9 +1654,9 @@
                 </div>
                 <div class="about-highlight">
                     <blockquote>
-                        “Godded Seed Means God's Offspring. We are His children, called to carry His presence and purpose into every sphere of life.”
+                        “Godded Seed means God's offspring. We are a generation rooted in Christ, inspired by God, and sent to give effective leadership and godly influence across every sphere of society.”
                     </blockquote>
-                    <div class="attribution">Godded Seed Confab 2026</div>
+                    <div class="attribution">Psalm 22:30</div>
                 </div>
             </div>
         </div>
@@ -1757,7 +1769,7 @@
         </div>
     </section>
 
-    <!-- ─── PARTNERS (Large & Black) ─── -->
+    <!-- ─── PARTNERS ─── -->
     <section class="partners-section section-padding" id="partners">
         <div class="container">
             <div class="section-header">
@@ -1768,15 +1780,14 @@
                 </p>
             </div>
             <div class="partners-grid">
-                <!-- Using large black placeholders – replace src with your actual partner logos -->
-                <div class="partner-logo"><img src="./BrandPawa logoo.png" alt="Partner 1" /></div>
-                <div class="partner-logo"><img src="./dolu brand.PNG" alt="Partner 2" /></div>
-                <div class="partner-logo"><img src="./seedworks brand.PNG" alt="Partner 3" /></div>
+                <div class="partner-logo"><img src="./BrandPawa logoo.png" alt="BrandPawa" /></div>
+                <div class="partner-logo"><img src="./dolu brand.PNG" alt="Dolu Properties" /></div>
+                <div class="partner-logo"><img src="./seedworks brand.PNG" alt="Seedworks" /></div>
             </div>
         </div>
     </section>
 
-    <!-- ─── PAST EVENTS ─── -->
+    <!-- ─── PAST EVENTS (5 years) ─── -->
     <section class="flyers-section section-padding" id="flyers">
         <div class="container">
             <div class="section-header">
@@ -1787,24 +1798,45 @@
                 </p>
             </div>
             <div class="flyers-grid">
+                <!-- 2021 -->
                 <div class="flyer-card animate-on-scroll">
-                    <img class="flyer-image" src="./2023.png" alt="Godded Seed Confab 2023" />
+                    <img class="flyer-image" src="./2021.JPG" alt="Godded Seed Confab 2021" />
+                    <div class="flyer-info">
+                        <div class="flyer-year">2021</div>
+                        <div class="flyer-title">Godded Seed Confab</div>
+                        <span class="flyer-tag"><i class="fas fa-tag"></i> The Advantage</span>
+                    </div>
+                </div>
+                <!-- 2022 -->
+                <div class="flyer-card animate-on-scroll">
+                    <img class="flyer-image" src="./2022.JPG" alt="Godded Seed Confab 2022" />
+                    <div class="flyer-info">
+                        <div class="flyer-year">2022</div>
+                        <div class="flyer-title">Godded Seed Confab</div>
+                        <span class="flyer-tag"><i class="fas fa-tag"></i> Light & Life</span>
+                    </div>
+                </div>
+                <!-- 2023 -->
+                <div class="flyer-card animate-on-scroll">
+                    <img class="flyer-image" src="./2023.JPG" alt="Godded Seed Confab 2023" />
                     <div class="flyer-info">
                         <div class="flyer-year">2023</div>
                         <div class="flyer-title">Godded Seed Confab</div>
-                        <span class="flyer-tag"><i class="fas fa-tag"></i> Skyrocketing</span>
+                        <span class="flyer-tag"><i class="fas fa-tag"></i> The Original</span>
                     </div>
                 </div>
+                <!-- 2024 -->
                 <div class="flyer-card animate-on-scroll">
-                    <img class="flyer-image" src="./2024.png" alt="Godded Seed Confab 2024" />
+                    <img class="flyer-image" src="./2024.JPG" alt="Godded Seed Confab 2024" />
                     <div class="flyer-info">
                         <div class="flyer-year">2024</div>
                         <div class="flyer-title">Godded Seed Confab</div>
                         <span class="flyer-tag"><i class="fas fa-tag"></i> The Rising</span>
                     </div>
                 </div>
+                <!-- 2025 -->
                 <div class="flyer-card animate-on-scroll">
-                    <img class="flyer-image" src="./2025.png" alt="Godded Seed Confab 2025" />
+                    <img class="flyer-image" src="./2025.JPG" alt="Godded Seed Confab 2025" />
                     <div class="flyer-info">
                         <div class="flyer-year">2025</div>
                         <div class="flyer-title">Godded Seed Confab</div>
@@ -1826,11 +1858,12 @@
                 </p>
             </div>
             <div class="cta-buttons">
-                <a href="https://luma.com/5ufh1xlg" target="_blank" class="btn btn-gold">
-                    <i class="fas fa-map-pin"></i> Register Lagos
-                </a>
+                <!-- Port Harcourt first -->
                 <a href="https://luma.com/q8fonhk4" target="_blank" class="btn btn-gold">
                     <i class="fas fa-map-pin"></i> Register Port Harcourt
+                </a>
+                <a href="https://luma.com/5ufh1xlg" target="_blank" class="btn btn-gold">
+                    <i class="fas fa-map-pin"></i> Register Lagos
                 </a>
             </div>
             <p style="margin-top:28px;font-size:0.9rem;color:rgba(255,255,255,0.4);">
@@ -1923,32 +1956,37 @@
                 setInterval(update, 1000);
             }
 
-            // ─── Speakers Data ───
+            // ─── Speakers Data (Reigner first, Dunamis labeled Convener) ───
             const speakers = [
+                {
+                    name: 'Reigner Davies',
+                    title: 'College Director, Mould Break Institute',
+                    img: './Rev Reigner Davis copy - Dunamis Shiloh Okonwor.png',
+                    label: 'Keynote Speaker'
+                },
                 {
                     name: 'Dunamis Shiloh Okonwor',
                     title: 'President, Godded Seed Community',
-                    img: './Coach Dunamis (5) copy 2 - Dunamis Shiloh Okonwor.png'
+                    img: './Coach Dunamis (5) copy 2 - Dunamis Shiloh Okonwor.png',
+                    label: 'Convener'
                 },
                 {
                     name: 'Kobaba Jornsen',
                     title: 'Mayor of Pitakwa',
-                    img: './Koaba - Dunamis Shiloh Okonwor.png'
+                    img: './Koaba - Dunamis Shiloh Okonwor.png',
+                    label: 'Speaker'
                 },
                 {
                     name: 'Joshua Triumphant',
                     title: 'Product Manager, Leadership Development Trainer',
-                    img: './Joshua Triumphant - Dunamis Shiloh Okonwor.png'
+                    img: './Joshua Triumphant - Dunamis Shiloh Okonwor.png',
+                    label: 'Speaker'
                 },
                 {
                     name: 'Bode Oluji-Joe',
                     title: 'CEO, Dolu Properties',
-                    img: './BODE OLUJI-JOE - Dunamis Shiloh Okonwor.png'
-                },
-                {
-                    name: 'Reigner Davies',
-                    title: 'College Director, Mould Break Institute',
-                    img: './Rev Reigner Davis copy - Dunamis Shiloh Okonwor.png'
+                    img: './BODE OLUJI-JOE - Dunamis Shiloh Okonwor.png',
+                    label: 'Speaker'
                 }
             ];
 
@@ -1970,7 +2008,7 @@
                                 </div>
                             </div>
                             <div class="speaker-info">
-                                <span class="speaker-badge"><i class="fas fa-microphone" style="font-size:0.45rem;margin-right:4px;"></i> Speaker</span>
+                                <span class="speaker-badge"><i class="fas fa-microphone" style="font-size:0.45rem;margin-right:4px;"></i> ${speaker.label}</span>
                                 <div class="name">${speaker.name}</div>
                                 <div class="role">${speaker.title}</div>
                                 <span class="speaker-tag"><i class="fas fa-star"></i> Confab 2026</span>
